@@ -8,7 +8,11 @@
                 <div class="panel-heading">Roles</div>
 
                 <div class="panel-body">                    
-                    Crear roles
+                    {{ Form::open(['route' => 'roles.store']) }}
+
+                        @include('roles.partials.form')
+                        
+                    {{ Form::close() }}
                 </div>
             </div>
         </div>

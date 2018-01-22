@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Permission;
+use Caffeinated\Shinobi\Models\Permission;
 
 class PermissionsTableSeeder extends Seeder
 {
@@ -24,12 +24,6 @@ class PermissionsTableSeeder extends Seeder
             'name'          => 'Ver detalle de usuario',
             'slug'          => 'users.show',
             'description'   => 'Ve en detalle cada usuario del sistema',            
-        ]);
-        
-        Permission::create([
-            'name'          => 'Creación de usuarios',
-            'slug'          => 'users.create',
-            'description'   => 'Podría crear nuevos usuarios en el sistema',
         ]);
         
         Permission::create([

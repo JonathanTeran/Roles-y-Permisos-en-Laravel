@@ -8,7 +8,12 @@
                 <div class="panel-heading">Roles</div>
 
                 <div class="panel-body">                    
-                    Editar rol
+                    {!! Form::model($role, ['route' => ['roles.update', $role->id],
+                    'method' => 'PUT']) !!}
+
+                        @include('roles.partials.form')
+                        
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

@@ -8,7 +8,12 @@
                 <div class="panel-heading">Productos</div>
 
                 <div class="panel-body">                    
-                    Editar producto
+                    {!! Form::model($product, ['route' => ['products.update', $product->id],
+                    'method' => 'PUT']) !!}
+
+                        @include('products.partials.form')
+                        
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
